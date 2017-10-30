@@ -8,6 +8,7 @@
 var prettier = require('prettier');
 var syncPromise = require('promise-synchronizer');
 var log = (global.fis && fis.log) || console;
+var assign = Object.assign ||require('object.assign');
 
 var rcConfig = (function getConfigFromFile() {
   var config;
@@ -19,7 +20,12 @@ var rcConfig = (function getConfigFromFile() {
 
 module.exports = function(content, file, conf){
   delete conf.filename;
-  content = prettier.format(content, Object.assign({}, rcConfig, conf));
+  content = prettier.format(content, assign({}, rcConfig, conf));
+
+  // remove inline file final newline
+  if (file.cache.isInline) {
+    content.replace(/\s*$/, '');
+  }
   return content;
 };
 
