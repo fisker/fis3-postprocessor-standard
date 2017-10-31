@@ -1,6 +1,6 @@
 {
   "name": "fis3-postprocessor-prettier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a code formatter of fis3 based on prettier",
   "main": "index.js",
   "repository": {
@@ -22,8 +22,10 @@
   "license": "MIT",
   "dependencies": {
     "object.assign": "^4.0.4",
-    "prettier": "^1.6.1",
-    "promise-synchronizer": "^0.1.1"
+    "prettier": "^1.7.4"
+  },
+  "scripts": {
+    "release": "npm --registry=https://registry.npmjs.org/ publish"
   },
   "bugs": {
     "url": "https://github.com/fisker/fis3-postprocessor-prettier/issues"

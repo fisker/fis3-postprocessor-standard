@@ -3,32 +3,24 @@
  * fisker Cheung<lionkay@gmail.com>
  */
 
-'use strict';
+'use strict'
 
-var prettier = require('prettier');
-var syncPromise = require('promise-synchronizer');
-var log = (global.fis && fis.log) || console;
-var assign = Object.assign ||require('object.assign');
+var prettier = require('prettier')
+var syncPromise = require('promise-synchronizer')
+var log = (global.fis && fis.log) || console
+var assign = Object.assign || require('object.assign')
 
-var rcConfig = (function getConfigFromFile() {
-  var config;
-  syncPromise(prettier.resolveConfig('prettier').then(function(data) {
-    config = data;
-  }));
-  return config;
-})();
+var rcConfig = prettier.resolveConfig.sync('prettier')
 
-module.exports = function(content, file, conf){
-  delete conf.filename;
-  content = prettier.format(content, assign({}, rcConfig, conf));
+module.exports = function(content, file, conf) {
+  delete conf.filename
+  content = prettier.format(content, assign({}, rcConfig, conf))
 
   // remove inline file final newline
   if (file.cache.isInline) {
-    content.replace(/\s*$/, '');
+    content.replace(/\s*$/, '')
   }
-  return content;
-};
+  return content
+}
 
-
-module.exports.defaultOptions = {};
-
+module.exports.defaultOptions = {}
