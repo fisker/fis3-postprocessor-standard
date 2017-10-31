@@ -6,7 +6,6 @@
 'use strict'
 
 var prettier = require('prettier')
-var syncPromise = require('promise-synchronizer')
 var log = (global.fis && fis.log) || console
 var assign = Object.assign || require('object.assign')
 
