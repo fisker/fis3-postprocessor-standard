@@ -1,29 +1,25 @@
-fis3-postprocessor-prettier
-a code formatter of fis3 based on prettier
+fis3-postprocessor-standard
+a code formatter of fis3 based on standard
 
-[![npm](https://img.shields.io/npm/v/fis3-postprocessor-prettier.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-prettier) 
-[![npm](https://img.shields.io/npm/dt/fis3-postprocessor-prettier.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-prettier) 
-[![npm](https://img.shields.io/npm/dm/fis3-postprocessor-prettier.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-prettier)
+[![npm](https://img.shields.io/npm/v/fis3-postprocessor-standard.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-standard)
+[![npm](https://img.shields.io/npm/dt/fis3-postprocessor-standard.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-standard)
+[![npm](https://img.shields.io/npm/dm/fis3-postprocessor-standard.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-standard)
 
 ## usage
 
-    $ npm i -g fis3-postprocessor-prettier
+    $ npm i -g fis3-postprocessor-standard
 
 ```
 // fis-conf.js
-var options = {};
-
 fis.match('*.js', {
-  postprocessor: fis.plugin('prettier', options)
+  postprocessor: fis.plugin('standard')
 });
 ```
 
-## config 
-https://github.com/prettier/prettier#options
-
-both options && Configuration File are supported.
+## config
+no config
 
 ## links
 fis3: [http://fis.baidu.com/]
 
-prettier: [https://github.com/prettier/prettier]
+standard: [https://github.com/standard/standard]

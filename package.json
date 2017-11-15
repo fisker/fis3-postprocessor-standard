@@ -1,34 +1,33 @@
 {
-  "name": "fis3-postprocessor-prettier",
-  "version": "1.0.4",
-  "description": "a code formatter of fis3 based on prettier",
+  "name": "fis3-postprocessor-standard",
+  "version": "1.0.0",
+  "description": "a code formatter of fis3 based on standard",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fisker/fis3-postprocessor-prettier.git"
+    "url": "https://github.com/fisker/fis3-postprocessor-standard.git"
   },
   "keywords": [
-    "prettier",
+    "standard",
     "html",
     "beautify",
     "format",
     "formatter",
     "postprocessor",
-    "fis3-postprocessor-prettier",
+    "fis3-postprocessor-standard",
     "fis",
     "fis3"
   ],
   "author": "fisker Cheung <lionkay@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "object.assign": "^4.0.4",
-    "prettier": "^1.8.2"
+    "standard": "^10.0.3"
   },
   "scripts": {
     "release": "npm --registry=https://registry.npmjs.org/ publish"
   },
   "bugs": {
-    "url": "https://github.com/fisker/fis3-postprocessor-prettier/issues"
+    "url": "https://github.com/fisker/fis3-postprocessor-standard/issues"
   },
   "readmeFilename": "README.md"
 }
