@@ -5,11 +5,15 @@ a code formatter of fis3 based on standard
 [![npm](https://img.shields.io/npm/dt/fis3-postprocessor-standard.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-standard)
 [![npm](https://img.shields.io/npm/dm/fis3-postprocessor-standard.svg?style=flat-square)](https://www.npmjs.com/package/fis3-postprocessor-standard)
 
+## install
+
+```sh
+$ npm i -g fis3-postprocessor-standard
+```
+
 ## usage
 
-    $ npm i -g fis3-postprocessor-standard
-
-```
+```js
 // fis-conf.js
 fis.match('*.js', {
   postprocessor: fis.plugin('standard')
