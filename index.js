@@ -9,8 +9,6 @@ var standard = require('standard')
 var log = (global.fis && fis.log) || console
 
 module.exports = function(content, file, conf) {
-  delete conf.filename
-
   content = content.replace(/\n\s+$/, '')
 
   try {
